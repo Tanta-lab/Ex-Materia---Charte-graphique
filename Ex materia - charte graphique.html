@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Ex materia, charte graphique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg:#F3E9DC;--fg:#1A1A1A;--card:#FBF7F0;--line:rgba(26,26,26,.2);--mut:#4A4550;--ac:#E4457F;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+        @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1426;--fg:#F3E9DC;--card:#172040;--line:rgba(243,233,220,.22);--mut:#B8B3C2}}
+        :root[data-theme="dark"]{--bg:#0F1426;--fg:#F3E9DC;--card:#172040;--line:rgba(243,233,220,.22);--mut:#B8B3C2}
+        html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);scroll-behavior:smooth}
+        *{box-sizing:border-box}
+        body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 'Space Mono',ui-monospace,monospace}
+        body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+        h1,h2,h3{font-family:'Poiret One','Josefin Sans',sans-serif;font-weight:400;margin:0;line-height:1.1}
+        nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:20px;align-items:center;padding:12px 20px;overflow-x:auto;white-space:nowrap;font-size:13px}
+        .brand{margin-right:auto;display:block;line-height:0}.brand svg{height:44px;width:60px;display:block}
+        a{color:var(--fg)}
+        a:hover{color:var(--ac)}
+        a:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+        .hero{max-width:1000px;margin:0 auto;padding:72px 20px 40px}
+        .hero h1{font-size:clamp(46px,11vw,112px)}
+        .hero p{margin:14px 0 24px;color:var(--mut)}
+        .thread{width:100%;height:auto;display:block}
+        .thread path{fill:none;stroke:var(--ac);stroke-width:3;stroke-linecap:round;stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.6s ease-out .3s forwards}
+        .loop path{animation:draw 3s ease-in-out infinite alternate}
+        @keyframes draw{to{stroke-dashoffset:0}}
+        @media (prefers-reduced-motion:reduce){.thread path{animation:none;stroke-dashoffset:0}}
+        .s{display:grid;grid-template-columns:minmax(140px,230px) 1fr;gap:32px;max-width:1000px;margin:0 auto;padding:56px 20px;border-top:1px solid var(--line)}
+        .s>h2{font-size:34px;align-self:start;position:sticky;top:calc(env(safe-area-inset-top,0px) + 92px)}
+        @media (max-width:720px){.s{grid-template-columns:1fr;gap:16px}.s>h2{position:static}}
+        .s p{margin:0 0 16px;max-width:62ch}
+        dl{margin:0;display:grid;grid-template-columns:110px 1fr;gap:10px 18px;max-width:640px}
+        dt{color:var(--mut)}dd{margin:0}
+        .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;border:1px solid var(--line)}
+        .two>div{padding:16px 18px}
+        .two>div+div{border-left:1px solid var(--line)}
+        .two h3{font-size:24px;margin-bottom:8px}
+        .two p{margin:0 0 10px;font-size:15px}
+        .tiles{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin:0 0 20px}
+        .t{display:flex;align-items:center;justify-content:center;min-height:110px;font-family:'Poiret One',sans-serif;font-size:32px}
+        @media (max-width:560px){.tiles{grid-template-columns:1fr}}
+        ul{margin:0 0 16px;padding-left:20px}
+        li{margin:2px 0}
+        .lg{height:96px;width:130px;flex:none;display:block}.t{padding:14px}h1,h2,h3{-webkit-text-stroke:.5px currentColor}.hero h1{-webkit-text-stroke:1px currentColor}
+        .big{font-size:84px;line-height:1}
+        .spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin:0 0 20px}
+        .spec div{border-bottom:1px solid var(--line);padding-bottom:12px}
+        .spec small,.row small{color:var(--fg);opacity:1;display:block;font-size:13px;line-height:1.5}
+        .icons{display:flex;gap:28px;flex-wrap:wrap;border:1px solid var(--line);padding:22px;margin:0 0 16px}
+        .icons figure{margin:0;text-align:center;font-size:13px;color:var(--fg)}
+        .icons svg{display:block;margin:0 auto 6px;width:48px;height:48px;fill:none;stroke:var(--fg);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+        .row{display:grid;grid-template-columns:72px 1fr;gap:16px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);max-width:620px}
+        .row i{display:block;height:56px;border:1px solid var(--line)}
+        .bar{display:flex;height:30px;margin:18px 0 6px;border:1px solid var(--line);max-width:620px}
+        ol{margin:0 0 16px;padding-left:22px}
+        footer{max-width:1000px;margin:0 auto;padding:28px 20px 40px;border-top:1px solid var(--line);font-size:13px;color:var(--mut)}
+    </style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="lg" viewBox="408 86 108 80"><path fill-rule="nonzero" fill="currentColor" d="M 418.695312 126.722656 C 418.25 126.722656 417.855469 126.558594 417.515625 126.230469 C 417.171875 125.90625 417.003906 125.503906 417.003906 125.03125 C 417.003906 124.585938 417.171875 124.199219 417.515625 123.871094 C 417.855469 123.546875 418.25 123.382812 418.695312 123.382812 C 419.140625 123.382812 419.53125 123.546875 419.875 123.871094 C 420.214844 124.199219 420.386719 124.585938 420.386719 125.03125 C 420.386719 125.503906 420.214844 125.90625 419.875 126.230469 C 419.53125 126.558594 419.140625 126.722656 418.695312 126.722656 M 415.355469 119.332031 L 423.011719 119.332031 L 423.011719 122.09375 L 415.355469 122.09375 Z M 415.355469 98.324219 L 423.011719 98.324219 L 423.011719 101.085938 L 415.355469 101.085938 Z M 414.199219 122.09375 L 414.199219 96.632812 C 414.199219 95.535156 414.4375 94.558594 414.910156 93.695312 C 415.386719 92.835938 416.058594 92.160156 416.9375 91.671875 C 417.8125 91.179688 418.78125 90.9375 419.851562 90.9375 L 423.011719 90.9375 L 423.011719 93.695312 L 420.339844 93.695312 C 419.390625 93.695312 418.613281 94 418.003906 94.609375 C 417.394531 95.21875 417.089844 95.996094 417.089844 96.945312 L 417.046875 122.09375 Z M 414.199219 122.09375 "/>
+    <path fill-rule="nonzero" fill="currentColor" d="M 437.964844 122.09375 L 424.347656 90.9375 L 427.375 90.9375 L 440.992188 122.09375 Z M 421.71875 122.09375 L 435.429688 90.9375 L 438.542969 90.9375 L 424.835938 122.09375 Z M 421.71875 122.09375 "/>
+    <path fill-rule="nonzero" fill="currentColor" d="M 449.359375 159.613281 C 448.914062 159.613281 448.519531 159.449219 448.179688 159.125 C 447.839844 158.796875 447.667969 158.394531 447.667969 157.921875 C 447.667969 157.476562 447.839844 157.089844 448.179688 156.765625 C 448.519531 156.4375 448.914062 156.273438 449.359375 156.273438 C 449.804688 156.273438 450.199219 156.4375 450.539062 156.765625 C 450.878906 157.089844 451.050781 157.476562 451.050781 157.921875 C 451.050781 158.394531 450.878906 158.796875 450.539062 159.125 C 450.199219 159.449219 449.804688 159.613281 449.359375 159.613281 M 440.992188 154.984375 L 440.992188 123.382812 L 450.515625 136.289062 L 448.203125 136.289062 L 457.726562 123.382812 L 457.726562 154.984375 L 454.878906 154.984375 L 454.878906 129.660156 L 456.925781 129.214844 L 449.359375 139.449219 L 441.703125 129.167969 L 443.839844 129.660156 L 443.839844 154.984375 Z M 440.992188 154.984375 "/>
+    <path fill-rule="nonzero" fill="currentColor" d="M 466.984375 127.789062 C 466.507812 127.789062 466.109375 127.621094 465.78125 127.277344 C 465.457031 126.9375 465.292969 126.542969 465.292969 126.097656 C 465.292969 125.652344 465.457031 125.261719 465.78125 124.917969 C 466.109375 124.578125 466.507812 124.40625 466.984375 124.40625 C 467.429688 124.40625 467.8125 124.578125 468.140625 124.917969 C 468.46875 125.261719 468.628906 125.652344 468.628906 126.097656 C 468.628906 126.542969 468.46875 126.9375 468.140625 127.277344 C 467.8125 127.621094 467.429688 127.789062 466.984375 127.789062 M 463.113281 127.789062 C 462.636719 127.789062 462.238281 127.621094 461.910156 127.277344 C 461.582031 126.9375 461.421875 126.542969 461.421875 126.097656 C 461.421875 125.652344 461.582031 125.261719 461.910156 124.917969 C 462.238281 124.578125 462.636719 124.40625 463.113281 124.40625 C 463.558594 124.40625 463.941406 124.578125 464.269531 124.917969 C 464.59375 125.261719 464.757812 125.652344 464.757812 126.097656 C 464.757812 126.542969 464.59375 126.9375 464.269531 127.277344 C 463.941406 127.621094 463.558594 127.789062 463.113281 127.789062 M 464.046875 150.976562 C 464.609375 150.976562 465.097656 150.851562 465.515625 150.601562 C 465.929688 150.347656 466.261719 150 466.515625 149.554688 C 466.769531 149.109375 466.894531 148.617188 466.894531 148.085938 C 466.894531 147.550781 466.769531 147.070312 466.515625 146.636719 C 466.261719 146.207031 465.929688 145.867188 465.515625 145.613281 C 465.097656 145.363281 464.609375 145.234375 464.046875 145.234375 C 463.511719 145.234375 463.03125 145.363281 462.597656 145.613281 C 462.167969 145.867188 461.828125 146.207031 461.578125 146.636719 C 461.324219 147.070312 461.199219 147.550781 461.199219 148.085938 C 461.199219 148.617188 461.324219 149.109375 461.578125 149.554688 C 461.828125 150 462.167969 150.347656 462.597656 150.601562 C 463.03125 150.851562 463.511719 150.976562 464.046875 150.976562 M 466.851562 154.984375 L 466.851562 150.355469 L 467.652344 151.511719 C 467.441406 151.898438 467.164062 152.253906 466.804688 152.582031 C 466.449219 152.90625 466.050781 153.167969 465.605469 153.359375 C 465.160156 153.550781 464.65625 153.648438 464.089844 153.648438 C 463.023438 153.648438 462.066406 153.402344 461.21875 152.914062 C 460.375 152.425781 459.699219 151.765625 459.195312 150.933594 C 458.691406 150.101562 458.4375 149.167969 458.4375 148.128906 C 458.4375 147.09375 458.691406 146.148438 459.195312 145.304688 C 459.699219 144.457031 460.375 143.796875 461.21875 143.324219 C 462.066406 142.847656 463.023438 142.609375 464.089844 142.609375 C 464.65625 142.609375 465.160156 142.699219 465.605469 142.878906 C 466.050781 143.054688 466.449219 143.300781 466.804688 143.613281 C 467.164062 143.921875 467.441406 144.289062 467.652344 144.703125 L 466.851562 145.859375 L 466.851562 134.109375 C 466.851562 133.425781 466.613281 132.847656 466.136719 132.375 C 465.664062 131.898438 465.070312 131.660156 464.359375 131.660156 L 463.425781 131.660156 L 463.425781 128.945312 L 464.535156 128.945312 C 465.515625 128.945312 466.390625 129.167969 467.164062 129.613281 C 467.933594 130.058594 468.546875 130.667969 469.007812 131.4375 C 469.46875 132.210938 469.699219 133.085938 469.699219 134.066406 L 469.699219 154.984375 Z M 466.851562 154.984375 "/>
+    <path fill-rule="nonzero" fill="currentColor" d="M 470.8125 154.984375 L 470.8125 123.828125 L 473.617188 123.828125 L 473.617188 128.945312 L 476.332031 128.945312 L 476.332031 131.660156 L 473.617188 131.660156 L 473.617188 154.984375 Z M 470.8125 154.984375 "/>
+    <path fill-rule="nonzero" fill="currentColor" d="M 481.316406 159.613281 C 480.871094 159.613281 480.476562 159.449219 480.136719 159.125 C 479.796875 158.796875 479.625 158.394531 479.625 157.921875 C 479.625 157.476562 479.796875 157.089844 480.136719 156.765625 C 480.476562 156.4375 480.871094 156.273438 481.316406 156.273438 C 481.761719 156.273438 482.152344 156.4375 482.496094 156.765625 C 482.835938 157.089844 483.007812 157.476562 483.007812 157.921875 C 483.007812 158.394531 482.835938 158.796875 482.496094 159.125 C 482.152344 159.449219 481.761719 159.613281 481.316406 159.613281 M 482.027344 137.003906 C 482.589844 137.003906 483.085938 136.878906 483.519531 136.625 C 483.949219 136.371094 484.289062 136.03125 484.542969 135.601562 C 484.792969 135.171875 484.921875 134.6875 484.921875 134.15625 C 484.921875 133.621094 484.792969 133.136719 484.542969 132.707031 C 484.289062 132.277344 483.949219 131.9375 483.519531 131.683594 C 483.085938 131.433594 482.589844 131.304688 482.027344 131.304688 C 481.496094 131.304688 481.011719 131.433594 480.582031 131.683594 C 480.152344 131.9375 479.816406 132.277344 479.578125 132.707031 C 479.34375 133.136719 479.222656 133.621094 479.222656 134.15625 C 479.222656 134.6875 479.34375 135.171875 479.578125 135.601562 C 479.816406 136.03125 480.152344 136.371094 480.582031 136.625 C 481.011719 136.878906 481.496094 137.003906 482.027344 137.003906 M 481.582031 154.984375 C 480.605469 154.984375 479.726562 154.761719 478.957031 154.316406 C 478.183594 153.871094 477.578125 153.253906 477.132812 152.46875 C 476.6875 151.683594 476.464844 150.816406 476.464844 149.867188 L 476.464844 134.15625 C 476.464844 133.117188 476.703125 132.175781 477.175781 131.328125 C 477.652344 130.480469 478.3125 129.824219 479.15625 129.347656 C 480.003906 128.871094 480.929688 128.636719 481.9375 128.636719 C 483.035156 128.636719 484.015625 128.871094 484.875 129.347656 C 485.738281 129.824219 486.417969 130.480469 486.925781 131.328125 C 487.429688 132.175781 487.679688 133.117188 487.679688 134.15625 C 487.679688 135.191406 487.433594 136.128906 486.945312 136.957031 C 486.457031 137.789062 485.78125 138.449219 484.921875 138.9375 C 484.058594 139.429688 483.097656 139.671875 482.027344 139.671875 C 481.464844 139.671875 480.9375 139.5625 480.449219 139.339844 C 479.957031 139.117188 479.542969 138.820312 479.203125 138.449219 C 478.859375 138.078125 478.613281 137.671875 478.46875 137.226562 L 479.269531 137.136719 L 479.269531 149.820312 C 479.269531 150.503906 479.507812 151.082031 479.980469 151.558594 C 480.453125 152.03125 481.046875 152.269531 481.761719 152.269531 L 482.695312 152.269531 L 482.695312 154.984375 Z M 481.582031 154.984375 "/>
+    <path fill-rule="nonzero" fill="currentColor" d="M 488.390625 154.984375 L 488.390625 134.066406 C 488.390625 133.085938 488.613281 132.210938 489.058594 131.4375 C 489.503906 130.667969 490.113281 130.058594 490.886719 129.613281 C 491.65625 129.167969 492.53125 128.945312 493.511719 128.945312 L 494.625 128.945312 L 494.625 131.660156 L 493.6875 131.660156 C 492.976562 131.660156 492.382812 131.898438 491.910156 132.375 C 491.433594 132.847656 491.195312 133.425781 491.195312 134.109375 L 491.195312 154.984375 Z M 488.390625 154.984375 "/>
+    <path fill-rule="nonzero" fill="currentColor" d="M 495.335938 128.945312 L 498.140625 128.945312 L 498.140625 154.984375 L 495.335938 154.984375 Z M 496.714844 127.789062 C 496.269531 127.789062 495.875 127.617188 495.535156 127.277344 C 495.195312 126.9375 495.023438 126.542969 495.023438 126.097656 C 495.023438 125.652344 495.195312 125.261719 495.535156 124.917969 C 495.875 124.578125 496.269531 124.40625 496.714844 124.40625 C 497.160156 124.40625 497.554688 124.578125 497.894531 124.917969 C 498.234375 125.261719 498.40625 125.652344 498.40625 126.097656 C 498.40625 126.542969 498.234375 126.9375 497.894531 127.277344 C 497.554688 127.617188 497.160156 127.789062 496.714844 127.789062 "/>
+    <path fill-rule="nonzero" fill="currentColor" d="M 504.816406 159.613281 C 504.371094 159.613281 503.976562 159.449219 503.636719 159.125 C 503.292969 158.796875 503.125 158.394531 503.125 157.921875 C 503.125 157.476562 503.292969 157.089844 503.636719 156.765625 C 503.976562 156.4375 504.371094 156.273438 504.816406 156.273438 C 505.261719 156.273438 505.652344 156.4375 505.996094 156.765625 C 506.335938 157.089844 506.503906 157.476562 506.503906 157.921875 C 506.503906 158.394531 506.335938 158.796875 505.996094 159.125 C 505.652344 159.449219 505.261719 159.613281 504.816406 159.613281 M 504.460938 150.976562 C 505.023438 150.976562 505.511719 150.851562 505.925781 150.601562 C 506.34375 150.347656 506.675781 150 506.929688 149.554688 C 507.179688 149.109375 507.308594 148.617188 507.308594 148.085938 C 507.308594 147.550781 507.179688 147.070312 506.929688 146.636719 C 506.675781 146.207031 506.34375 145.867188 505.925781 145.613281 C 505.511719 145.363281 505.023438 145.234375 504.460938 145.234375 C 503.925781 145.234375 503.441406 145.363281 503.011719 145.613281 C 502.582031 145.867188 502.242188 146.207031 501.988281 146.636719 C 501.738281 147.070312 501.609375 147.550781 501.609375 148.085938 C 501.609375 148.617188 501.738281 149.109375 501.988281 149.554688 C 502.242188 150 502.582031 150.347656 503.011719 150.601562 C 503.441406 150.851562 503.925781 150.976562 504.460938 150.976562 M 507.261719 154.984375 L 507.261719 150.355469 L 508.066406 151.511719 C 507.855469 151.898438 507.574219 152.253906 507.21875 152.578125 C 506.863281 152.90625 506.460938 153.167969 506.015625 153.359375 C 505.570312 153.554688 505.066406 153.648438 504.503906 153.648438 C 503.433594 153.648438 502.480469 153.402344 501.632812 152.914062 C 500.789062 152.425781 500.113281 151.765625 499.609375 150.933594 C 499.101562 150.101562 498.851562 149.167969 498.851562 148.128906 C 498.851562 147.089844 499.101562 146.148438 499.609375 145.304688 C 500.113281 144.457031 500.789062 143.796875 501.632812 143.324219 C 502.480469 142.847656 503.433594 142.609375 504.503906 142.609375 C 505.066406 142.609375 505.570312 142.699219 506.015625 142.878906 C 506.460938 143.054688 506.863281 143.300781 507.21875 143.613281 C 507.574219 143.921875 507.855469 144.289062 508.066406 144.703125 L 507.261719 145.859375 L 507.261719 96.15625 C 507.261719 95.472656 507.023438 94.894531 506.550781 94.421875 C 506.074219 93.945312 505.484375 93.707031 504.769531 93.707031 L 503.835938 93.707031 L 503.835938 90.992188 L 504.949219 90.992188 C 505.925781 90.992188 506.800781 91.214844 507.574219 91.660156 C 508.34375 92.105469 508.960938 92.714844 509.421875 93.484375 C 509.882812 94.257812 510.113281 95.132812 510.113281 96.109375 L 510.113281 154.984375 Z M 507.261719 154.984375 "/>
+    <path fill="none" stroke-width="3" stroke-linecap="square" stroke-linejoin="round" stroke="currentColor" stroke-miterlimit="10" d="M -0.00167242 -0.000885205 L -15.254576 -0.000885205 C -18.348178 -0.000885205 -20.855129 2.506066 -20.855129 5.603579 L -20.855129 23.707603 " transform="matrix(0.998785, 0, 0, -0.998785, 436.185264, 153.389741)"/>
+    <path fill-rule="nonzero" fill="currentColor" d="M 439.640625 90.992188 L 503.835938 90.992188 L 503.835938 93.707031 L 439.640625 93.707031 Z M 439.640625 90.992188 "/></symbol></svg>
+<nav aria-label="Sections">
+    <a class="brand" href="#top" aria-label="Ex materia, haut de page"><svg viewBox="0 0 108 80" aria-hidden="true"><use href="#lg"/></svg></a>
+    <a href="#cadre">Cadre</a><a href="#voix">Voix et ton</a><a href="#logo">Logo</a><a href="#typographie">Typographie</a><a href="#iconographie">Iconographie</a><a href="#couleur">Couleur</a><a href="#images">Images</a><a href="#mouvement">Mouvement</a>
+</nav>
+
+<header class="hero">
+    <h1>Charte graphique</h1>
+    <p>Ex materia, une idée matérialisée.</p>
+    <p>[Logo animé]</p>
+</header>
+
+<section class="s" id="cadre">
+    <h2>Cadre</h2>
+    <div>
+        <p>Ex materia crée des pièces de mode sur mesure à partir d’une inspiration que le client apporte : un tableau, un objet, un univers. Nous personnalisons aussi des pièces existantes.</p>
+        <dl>
+            <dt>Nom</dt><dd>Du latin « à partir de la matière » : chaque pièce naît d’une idée et prend corps dans la matière.</dd>
+            <dt>Promesse</dt><dd>Une idée matérialisée.</dd>
+            <dt>Méthode</dt><dd>Imagination =&gt; création.</dd>
+            <dt>Cibles</dt><dd>Les artistes émergents (clips, concerts), les particuliers (cosplay, style), maisons de mode.</dd>
+            <dt>Formules</dt><dd>Sur mesure, ou personnalisation d’une pièce existante.</dd>
+        </dl>
+    </div>
+</section>
+
+<section class="s" id="logo">
+    <h2>Logo</h2>
+    <div>
+        <p>Le logo est de style art déco : lettres fines et condensées dans un cadre noir, blanc cassé ou rose magenta. Les tuiles montrent les trois fonds autorisés.</p>
+        <div class="tiles">
+            <div class="t" style="background:#F3E9DC;color:#1A1A1A;border:1px solid var(--line)"><svg class="lg" viewBox="0 0 108 80" role="img" aria-label="Logo Ex materia"><use href="#lg"/></svg></div>
+            <div class="t" style="background:#14213D;color:#F3E9DC;"><svg class="lg" viewBox="0 0 108 80" role="img" aria-label="Logo Ex materia"><use href="#lg"/></svg></div>
+            <div class="t" style="background:#1A1A1A;color:#E4457F;"><svg class="lg" viewBox="0 0 108 80" role="img" aria-label="Logo Ex materia"><use href="#lg"/></svg></div>
+        </div>
+        <ul>
+            <li>Ne pas étirer ni déformer le logo.</li>
+            <li>Ne pas changer ses couleurs en dehors de la palette.</li>
+            <li>Ne pas le poser sur une photo chargée.</li>
+            <li>Ne pas ajouter d’ombre ni de dégradé.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="s" id="typographie">
+    <h2>Typographie</h2>
+    <div>
+        <div class="spec">
+            <div><span class="big" style="font-family:'Poiret One',sans-serif">Aa</span><small>Poiret One, pour les titres. Repli : Josefin Sans.</small></div>
+            <div><span class="big" style="font-family:'Space Mono',monospace">Aa</span><small>Space Mono, pour les textes et les notes.</small></div>
+        </div>
+        <p>Échelle : titre 56 px (interligne 1,1), sous-titre 28 px, texte 16 px (interligne 1,65), note 12 px. Phrases en minuscules avec une majuscule initiale, pas de titres tout en majuscules.</p>
+    </div>
+</section>
+
+<section class="s" id="iconographie">
+    <h2>Iconographie</h2>
+    <div>
+        <p>Icônes au trait, épaisseur constante de 1,5 pt, extrémités arrondies, formes simples. l'aiguille et le fil viennent de l’atelier de couture, le pinceau vient de l'art de peindre et de dessiner, quand au losange, c'est une préférence personnelle du fondateur de la marque.</p>
+        <div class="icons">
+            <figure><svg viewBox="0 0 48 48" role="img" aria-label="Aiguille"><path d="M8 40 L36 12"/><ellipse cx="38" cy="10" rx="2.5" ry="5" transform="rotate(45 38 10)"/></svg>Aiguille</figure>
+            <figure><svg viewBox="0 0 48 48" role="img" aria-label="Pinceau"><path d="M12 38 C8 32 14 26 20 28 C23 33 19 39 12 38Z"/><path d="M20 28 L38 10"/></svg>Pinceau</figure>
+            <figure><svg viewBox="0 0 48 48" role="img" aria-label="Fil"><path d="M6 30 C14 8 24 42 32 20 C36 10 44 16 42 26"/></svg>Fil</figure>
+            <figure><svg viewBox="0 0 48 48" role="img" aria-label="Losange"><path d="M24 6 L42 24 L24 42 L6 24Z"/></svg>Losange</figure>
+        </div>
+    </div>
+</section>
+
+<section class="s" id="couleur">
+    <h2>Couleur</h2>
+    <div>
+        <div class="row"><i style="background:#1A1A1A"></i><div>Noir encre<small>#1A1A1A, rgb(26, 26, 26). Textes et logo.</small></div></div>
+        <div class="row"><i style="background:#14213D"></i><div>Bleu minuit<small>#14213D, rgb(20, 33, 61). Fonds sombres.</small></div></div>
+        <div class="row"><i style="background:#4B2A7B"></i><div>Prune profond<small>#4B2A7B, rgb(75, 42, 123). Motifs et ambiance.</small></div></div>
+        <div class="row"><i style="background:#E4457F"></i><div>Rose magenta<small>#E4457F, rgb(228, 69, 127). Accent, un seul par page.</small></div></div>
+        <div class="row"><i style="background:#C9CDD6"></i><div>Argent<small>#C9CDD6, rgb(201, 205, 214). Fins détails.</small></div></div>
+        <div class="row"><i style="background:#F3E9DC"></i><div>Blanc cassé<small>#F3E9DC, rgb(243, 233, 220). Fonds de pages.</small></div></div>
+        <div class="bar" role="img" aria-label="Proportions : base 55 %, structure 30 %, accents 15 %"><div style="flex:55;background:#F3E9DC"></div><div style="flex:20;background:#14213D"></div><div style="flex:10;background:#1A1A1A"></div><div style="flex:8;background:#4B2A7B"></div><div style="flex:5;background:#E4457F"></div><div style="flex:2;background:#C9CDD6"></div></div>
+        <p style="font-size:13px">Base 55 %, structure 30 %, accents 15 %.</p>
+        <p>Contraste : le rose sur blanc cassé n’atteint que 3,2 pour 1. Réserve-le aux grands titres et aux détails, jamais au texte courant. Sur le noir encre, il atteint 4,5 pour 1.</p>
+    </div>
+</section>
+
+<section class="s" id="images">
+    <h2>On peut, on ne peut pas</h2>
+    <div>
+        <svg width="100%" height="60" role="img" aria-label="Motif losange violet sur bleu nuit" style="display:block;margin:0 0 20px"><defs><pattern id="lz" width="40" height="60" patternUnits="userSpaceOnUse"><rect width="40" height="60" fill="#14213D"/><path d="M20 0 L40 30 L20 60 L0 30Z" fill="#4B2A7B" stroke="#C9CDD6" stroke-width="1"/></pattern></defs><rect width="100%" height="72" fill="url(#lz)"/></svg>
+        <div class="two">
+            <div><h3>Autorisé</h3><ul><li>Une ambiance, une palette, un style.</li><li>Une œuvre dont l’auteur est mort depuis plus de 70 ans.</li><li>Une œuvre d’un artiste partenaire, avec son accord.</li></ul></div>
+            <div><h3>Interdit</h3><ul><li>Un personnage reconnaissable.</li><li>Un nom ou un logo de marque.</li><li>Un détail très distinctif d’une œuvre récente.</li></ul></div>
+        </div>
+        <p style="margin-top:16px">Pour être sûr : si on reconnaît tout de suite le personnage ou l’œuvre, la pièce est trop proche. Les images du moodboard sont des inspirations internes, sources citées, jamais reprises dans nos créations. Cette règle est interne à la marque, ce n’est pas un avis juridique.</p>
+    </div>
+</section>
+
+<section class="s" id="mouvement">
+    <h2>Mouvement</h2>
+    <div>
+        <p>L’animation du logo raconte la méthode en trois secondes :</p>
+        <ol>
+            <li>Le pinceau trace un trait épais (0,8 s).</li>
+            <li>Le trait s’affine en fil (0,8 s).</li>
+            <li>Le fil traverse le chas de l’aiguille (0,8 s).</li>
+            <li>Le logo apparaît (0,6 s).</li>
+        </ol>
+        <p>[Logo animé]</p>
+        <p>Usage : intro du site et animation de chargement, avec une courbe d’accélération douce. L’animation est désactivée pour les personnes qui réduisent les animations dans leur système.</p>
+    </div>
+</section>
+
+<footer>Ex materia, projet universitaire.</footer>
+</body>
+</html>
